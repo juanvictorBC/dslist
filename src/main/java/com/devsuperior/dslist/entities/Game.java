@@ -13,10 +13,12 @@ import jakarta.persistence.Table;
 @Table(name = "tb_game")
 public class Game {
 	
+	//Chave primária.
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
+	//Teve-se que se criar essse @Column pta alterar o nome da variavel, pois "year" é uma palavra reservada do BD.
 	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
